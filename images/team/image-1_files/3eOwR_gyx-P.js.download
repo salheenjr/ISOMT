@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("structuredClone",[],(function(a,b,c,d,e,f){"use strict";b=(a=window)==null?void 0:a.structuredClone;f["default"]=b}),66);

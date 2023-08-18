@@ -1,0 +1,511 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Droid Arabic Kufi', sans-serif;
+    background-color: #f8fafb;
+}
+:root {
+    --mainColor: #388aa0;
+    --secondaryColor: #eef80a;
+    --thirdColor: #d0e92b;
+}
+    
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    display: block;
+}
+
+/* Container */
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* ------------------------Header------------------------ */
+.header {
+    background-color: var(--mainColor);
+    box-shadow: 0px 2px 5px 2px #afacac;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+}
+.header .logo {
+    height: 75px;
+}
+.header .logo img {
+    width: 80px;
+}
+.header .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .links li {
+    margin-left: 30px;
+    cursor: pointer;
+    font-weight: 200;
+}
+.header .links li a {
+    color: #FFF;
+    transition: 0.25s;
+}
+@media (max-width: 768px) {
+    .header .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .header .container {
+        flex-direction: column;
+    }
+    .header .links {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .header .links li {
+        font-size: 15px;
+        margin-left: 15px;
+        font-weight: bold;
+    }
+}
+.header .links li a:hover {
+    color: var(--secondaryColor);
+}
+/* ------------------------Landing------------------------ */
+.landing {
+    background-image: url(../images/counter.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.landing::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 55%);
+}
+.landing .container {
+    position: relative;
+}
+.landing .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.landing .logo .logo-01 {
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 50px;
+}
+.landing .text {
+    text-align: center;
+}
+.landing .text h2 {
+    color: var(--secondaryColor);
+    font-size: 65px;
+}
+.landing .text .change-color {
+    color: var(--mainColor);
+}
+.landing .text p {
+    color: #afacac;
+    font-weight: bold;
+    font-size: 30px;
+}
+/* ------------------------About Us------------------------ */
+.about {
+    background-image: url(../images/about-us.jpg);
+    background-size: cover;
+    height: 80vh;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.about::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 55%);
+}
+.about .container {
+    position: relative;
+}
+.about .container .title {
+    color: #FFF;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+}
+.about2 .container .card {
+    background-color: #EEE;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.about2 .container .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+}
+.about2 .container .cards .image {
+    background-color: #EEE;
+    padding: 20px;
+    border-radius: 6px;
+}
+.about2 .container .cards .image  img {
+    width: 100%;
+}
+.about2 .container .head {
+    padding: 10px;
+}
+.about2 .container .info{
+    padding: 10px;
+    line-height: 2;
+    font-size: 20px;
+    color: var(--mainColor);
+}
+.goalsTitl {
+    color: var(--mainColor);
+}
+.about2 .container .goals {
+    background-color: #EEE;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.about2 .container .goals li {
+    font-size: 20px;
+    color: #17635b;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.about2 .container .goals li span{
+    font-size: 22px;
+    color: red;
+    padding-left: 10px;
+}
+/* ------------------------Form------------------------ */
+.contact-us {
+    background-image: url(../images/contact-02.jpg);
+    background-size: cover;
+    height: 80vh;
+    position: relative;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-us::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 55%);
+}
+.contact-us h2 {
+    color: #FFF;
+    font-size: 60px;
+    position: relative;
+}
+.contact-us .address {
+    padding: 20px;
+}
+.ourphone,
+.location,
+.ourgmail {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 20px;
+    color: #17635b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ourphone i,
+.location i,
+.ourgmail i {
+    margin-right: 20px;
+    color: var(--mainColor);
+}
+.ourgmail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ourgmail a,
+.ourphone a {
+    color: #17635b;
+}
+.form {
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: #26A69A;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    padding: 15px;
+}
+@media (min-width: 992px) {
+    .form form {
+        width: 70%;
+    }
+}
+.form form input,
+.form form textarea {
+    padding: 20px;
+    margin: 20px;
+    border: none;
+    border-radius: 10px;
+}
+.form form input:focus {
+    outline: none;
+    border: 1px solid var(--thirdColor);
+}
+.form form textarea {
+    height: 250px;
+}
+.form form textarea:focus {
+    outline: none;
+    border: 1px solid var(--thirdColor);
+}
+.form form button {
+    width: fit-content;
+    margin: 20px auto 0;
+    padding: 15px 50px;
+    color: #FFF;
+    background-color:  #ffc107;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+.form form button:hover {
+    background-color: red;
+    color: #FFF;
+}
+/* ------------------------Course------------------------ */
+.ourcourse {
+    background-color: #EEE;
+}
+.course {
+    background-image: url(../images/counter.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.course::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 55%);
+}
+.course h2 {
+    font-size: 60px;
+    position: relative;
+    color: #FFF;
+}
+.course .container {
+    padding: 25px;
+}
+.ourcourse .container .card-of-cours {
+    background-color: #FFF;
+    padding: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.ourcourse .container .card-of-cours img {
+    width: 100%;
+}
+.ourcourse .container .card-of-cours h3 {
+    text-align: center;
+    padding: 15px;
+    background-color: #26a69946;
+}
+.ourcourse .container .card-of-cours p {
+    line-height: 2;
+    color: #17635b;
+    background-color: #d0e92b3f;
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+.ourcourse .container .card-of-cours a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #17635b;
+    padding: 15px;
+    color: #EEE;
+    transition: 0.3;
+    font-weight: bold;
+    font-size: 20px;
+}  
+.ourcourse .container .card-of-cours a:hover {
+    color: var(--secondaryColor);
+    background-color: #427b76;
+}
+.ourcourse .container .card-of-cours img,
+.ourcourse .container .card-of-cours h3,
+.ourcourse .container .card-of-cours p,
+.ourcourse .container .card-of-cours a {
+    border-radius: inherit;
+}
+/* ------------------------Our Team------------------------ */
+.ourteamimage {
+    background-image: url(../images/about-us.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ourteamimage::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 55%);
+}
+.ourteamimage h2 {
+    font-size: 60px;
+    position: relative;
+    color: #FFF;
+}
+.ourteam {
+    height: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.ourteam .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.ourteam .container .box {
+    background-color: #EEE;
+    border: 6px solid #EEE;
+    border-radius: 4%;
+    overflow: hidden;
+}
+.ourteam .container .box img {
+    width: 100%;
+    border-radius: 4%;
+}
+.ourteam .container .box h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: var(--mainColor);
+}
+.ourteam .container .box a {
+    color: red;
+    background: var(--secondaryColor);
+    border-radius: 8%;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.2s;
+}
+.ourteam .container .box a:hover {
+    background-color: #26A69A;
+    color: #FFF;
+}
+/* ------------------------Footer------------------------ */
+.footer {
+    padding: 50px;
+    background-color: #000;
+    position: relative;
+}
+.footer .copyright {
+    color: #FFF;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+.footer .social {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.footer .social a i {
+    background-color: rgba(255, 255, 255, 0.461);
+    padding: 15px;
+    border-radius: 50%;
+    color: #FFF;
+    transition: 0.3s;
+}
+.footer .social .facebook:hover {
+    background-color: #0e8df2;
+}
+.footer .social .instagram:hover {
+    background-image: linear-gradient(230deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80);
+}
+.footer .social .gmail:hover {
+    background-color: red;
+}
+.footer .copyright span {
+    color: var(--secondaryColor);
+}
